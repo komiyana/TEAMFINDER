@@ -1,0 +1,43 @@
+.play-layout {
+    display: flex;
+    height: 100vh;
+  }
+  
+  .main-content {
+    flex: 1;
+    padding: 0rem;
+    background: #0f1923;
+    color: white;
+    scrollbar-width: none;
+    overflow-y: auto;
+  
+    .placeholder {
+      font-size: 1.5rem;
+      opacity: 0.6;
+    }
+  
+    .lfg-cards {
+      margin-top: 2rem;
+      display: grid;
+      gap: 1rem;
+    }
+  
+    .lfg-card {
+      background: #1c2632;
+      padding: 1rem;
+      border-left: 1em solid #ff4655;
+      border-radius: 1.5em;
+      box-shadow: 0 4px rgba(255, 70, 85, 0.2);
+      border-left-width: 1em;
+      
+      h3 {
+        margin: 0 0 0.5rem;
+        color: #ff4655;
+      }
+  
+      p {
+        margin: 0.25rem 0;
+      }
+    }
+  }
+  

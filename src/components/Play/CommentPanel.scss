@@ -1,0 +1,102 @@
+.comment-panel {
+    position: fixed;
+    left: 101.7em;
+    right: 42em;
+    bottom: 0em;
+    height: 26em;
+    background: #131d29;
+    border-top: 2px solid #ff4655;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    z-index: 1000;
+    animation: slideUp 0.3s ease-out;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.2);
+    width: 19.3em;
+    scrollbar-width: thin;
+  scrollbar-color: #ff4655 transparent;
+
+  @keyframes slideUp {
+    from {
+      transform: translateY(100%);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+
+  .panel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid #222;
+    font-weight: bold;
+
+    .close-btn {
+      cursor: pointer;
+      color: #ff4655;
+      &:hover {
+        color: white;
+      }
+    }
+  }
+
+  .panel-body {
+    flex: 1;
+    padding: 1rem;
+    overflow-y: auto;
+
+    .no-comments {
+      color: #888;
+      font-style: italic;
+    }
+
+    .comment {
+      margin-bottom: 0.75rem;
+      font-size: 0.9rem;
+        word-break: break-word;
+        white-space: normal;
+
+      strong {
+        color: #ff4655;
+      }
+    }
+  }
+
+  .panel-footer {
+    display: flex;
+    border-top: 1px solid #222;
+    padding: 0.75rem;
+
+    input {
+      flex: 1;
+      padding: 0.5rem;
+      background: #0f1923;
+      border: 1px solid #444;
+      border-radius: 6px;
+      color: white;
+      margin-right: 0.5rem;
+
+      &:focus {
+        outline: none;
+        border-color: #ff4655;
+      }
+    }
+
+    button {
+      background: #ff4655;
+      border: none;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+
+      &:hover {
+        background: white;
+        color: #ff4655;
+      }
+    }
+  }
+}

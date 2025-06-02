@@ -1,0 +1,121 @@
+@keyframes pulse {
+  0% { box-shadow: 0 0 0px #ff4655; }
+  50% { box-shadow: 0 0 8px #ff4655aa; }
+  100% { box-shadow: 0 0 0px #ff4655; }
+}
+
+.lfg-form {
+  max-width: 520px;
+  margin: 3rem auto;
+  background: linear-gradient(135deg, #0f1923, #131d29);
+  padding: 2.5rem;
+  border-radius: 20px;
+  box-shadow: 0 0 50px rgba(255, 70, 85, 0.15), 0 0 5px #ff465550;
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+  font-family: 'Valorant', sans-serif;
+  color: white;
+  backdrop-filter: blur(6px);
+  position: relative;
+
+  h2 {
+    color: #fff;
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    position: relative;
+
+    &::after {
+      content: '';
+      width: 205px;
+      height: 3px;
+      background: linear-gradient(to right, #ff4655, #ff9d7e);
+      position: absolute;
+      bottom: -8px;
+      left: 50%;
+      transform: translateX(-50%);
+      border-radius: 3px;
+    }
+  }
+
+  .form-group {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: #0f1923;
+    border: 1px solid #ff4655;
+    padding: 0.65rem 1rem;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+
+    svg {
+      color: #ff4655;
+      transition: transform 0.3s ease, color 0.3s ease;
+    }
+
+    &:hover svg {
+      transform: scale(1.1);
+      color: #ff798a;
+    }
+
+    &:focus-within {
+      border-color: #ff798a;
+      box-shadow: 0 0 10px #ff465580;
+    }
+
+    select,
+    input {
+      flex: 1;
+      background: #0f1923;
+      border: none;
+      color: white;
+      font-size: 1rem;
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+
+  .textarea-group {
+    align-items: flex-start;
+
+    textarea {
+      flex: 1;
+      background: transparent;
+      border: none;
+      color: white;
+      height: 100px;
+      font-size: 1rem;
+      resize: none;
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+
+  button {
+    background: #ff4655;
+    color: white;
+    border: none;
+    padding: 0.85rem 1.6rem;
+    border-radius: 12px;
+    font-weight: bold;
+    font-size: 1.05rem;
+    cursor: pointer;
+    transition: background 0.25s, transform 0.2s;
+    animation: pulse 2.5s infinite;
+
+    &:hover {
+      background: white;
+      color: #ff4655;
+      transform: scale(1.03);
+    }
+
+    &:active {
+      transform: scale(0.96);
+    }
+  }
+}

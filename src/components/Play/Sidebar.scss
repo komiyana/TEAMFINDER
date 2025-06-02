@@ -1,0 +1,38 @@
+.sidebar {
+    width: 60px;
+    background: #0f1923;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 0;
+    gap: 1.5rem;
+    border-right: 1px solid #222;
+    height: 100vh;
+  
+    .icon {
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      background: #1a1f2b;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      color: white;
+      transition: all 0.2s ease;
+  
+      svg {
+        width: 20px;
+        height: 20px;
+      }
+  
+      &:hover {
+        background: #ff4655;
+      }
+  
+      &.active {
+        background: #ff4655;
+      }
+    }
+  }
+  
