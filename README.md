@@ -14,9 +14,8 @@
 ## 🚀 Tech Stack
 
 - HTML / CSS / JavaScript
-- [React.js / Next.js] *(if you’re using it)*
 - Tailwind CSS for styling
-- [Appwrite / Firebase / Supabase] *(if used for backend/auth)*
+- Appwrite / Firebase
 - Icons & assets inspired by Valorant
 
 ## 📦 Setup & Run Locally
